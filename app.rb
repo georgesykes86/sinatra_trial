@@ -19,7 +19,7 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   @color = params[:color]
@@ -27,4 +27,8 @@ get '/named-cat' do
   @age = params[:age]
   @sex = params[:sex]
   erb(:index)
+end
+
+get '/naming-form' do
+  erb(:namingform)
 end
