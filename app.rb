@@ -21,7 +21,10 @@ end
 
 get '/named-cat' do
   p params
-  @name = params[:name] + params[:othername]
+  @name = params[:name]
   @color = params[:color]
+  @surname = params[:surname]
+  @age = params[:age]
+  @sex = params[:sex]
   erb(:index)
 end

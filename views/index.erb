@@ -1,5 +1,17 @@
 <div text-align='center'>
-  <h1>My name is <%= @name %></h1>
+  <h1>My name is <%= @name %> <%= @surname %></h1>
   <p>I am a <%= @color %> cat</p>
+  <p>I am a <%= @age %> year old <%= @sex %></p>
   <img style='border: 3px dashed red' align='middle' src='http://bit.ly/1eze8aE'>
 </div>
+<% if !@name %>
+<form id="form" action="/named-cat">
+  <div>
+    <input type="text" name="name">
+    <input type="text" name="surname">
+    <input type="text" name="age">
+    <input type="text" name="sex">
+    <input type="submit" value="Submit">
+  </div>
+</form>
+<% end %>
