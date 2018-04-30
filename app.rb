@@ -14,7 +14,14 @@ get '/shotgun' do
   "gunsforguns"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = %w(Amigo Viking Oscar).sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name] + params[:othername]
+  @color = params[:color]
   erb(:index)
 end
