@@ -15,5 +15,6 @@ get '/shotgun' do
 end
 
 get '/cat' do
+  @name = %w(Amigo Viking Oscar).sample
   erb(:index)
 end
